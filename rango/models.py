@@ -22,7 +22,6 @@ class Category(models.Model):
 class Page(models.Model):
     TITLE_MAX_LENGTH = 128
     URL_MAX_LENGTH = 200
-    NAME_MAX_LENGTH = 128
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=TITLE_MAX_LENGTH)
